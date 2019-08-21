@@ -4,7 +4,7 @@ import re
 import pickle
 import feedparser
 from time import sleep
-
+# te
 #open file with stored item dictionary
 # with open('file_name.pickle','wb') as handle:
 #     pickle.dump(items_dict,handle,protocol=pickle.HIGHEST_PROTOCOL)
