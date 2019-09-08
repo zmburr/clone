@@ -53,17 +53,10 @@ new = re.sub(r'\s+'," ",soup.text)
 
 for key in items_dict.keys():
     found = re.search(key +"\s?"+items_dict[key], new)
-    #print(key, unserialized_data[key])
     if found:
         locations.append(found.span()[0])
 
-#item7 = re.search(r'Item 7\\.01\\. Regulation FD Disclosure.?',new).span()[0]
-#item9 = re.search(r'Item 9\.01\. Financial Statements and Exhibits', new).span()[0]
 signature = re.search(r'SIGNATURE',new).span()[0]
-
-#regFD = re.findall(r'Item\s\d\.\d\d\..*',new)
-# locations.append(item7)
-# locations.append(item9)
 
 locations.append(signature)
 print(locations)
