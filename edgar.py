@@ -11,6 +11,7 @@ from time import sleep
 with open('file_name.pickle', 'rb') as handle:
     unserialized_data = pickle.load(handle)
 
+
 locations = []
 url = 'https://www.sec.gov/Archives/edgar/data/51143/000155837019006914/ibm-20190802x8k.htm'
 r = requests.get(url)
