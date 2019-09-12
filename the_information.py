@@ -16,4 +16,3 @@ def scrape_information():
     title = titles[0].text
     if count == 0:
         headlines.append(link)
-    
