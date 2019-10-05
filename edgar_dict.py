@@ -6,7 +6,7 @@ import feedparser
 from time import sleep
 #next goal - need to make regex patterns that can match all different types of typos in names
 items_dict = {
-    'Item 1\\.01': 'Entry into a Material Definitive Agreement',
+    'Item\\.? 1\\.01': 'Entry into a Material Definitive Agreement',
     'Item 1\\.02\\.': 'Termination of a Material Definitive Agreement',
     'Item 1\\.03\\.': 'Bankruptcy or Receivership',
     'Item 1\\.04\\.': 'Mine Safety - Reporting of Shutdowns and Patterns of Violations',
@@ -21,7 +21,7 @@ items_dict = {
     'Item 4\\.01\\.': "Changes in Registrant's Certifying Accountant",
     'Item 4\\.02\\.': 'Non-Reliance on Previously Issued Financial Statements or a Related Audit Report or Completed Interim Review',
     'Item 5\\.01\\.': 'Changes in Control of Registrant',
-    'Item 5\\.02\\.?': 'Departure of Director or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers',
+    'Item 5\\.02\\.': 'Departure of Director or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers',
     'Item 5\\.03\\.': 'Amendments to Articles of Incorporation or Bylaws; Change in Fiscal Year',
     'Item 5\\.04\\.': "Temporary Suspension of Trading Under Registrant's Employee Benefit Plans",
     'Item 5\\.05\\.': "Amendment to Registrant's Code of Ethics, or Waiver of a Provision of the Code of Ethics",
@@ -31,8 +31,8 @@ items_dict = {
     'Item 6\\.01\\.': 'ABS Informational and Computational Material', 'Item 6\\.02\\.': 'Change of Servicer or Trustee',
     'Item 6\\.03\\.': 'Change in Credit Enhancement or Other External Support',
     'Item 6\\.04\\.': 'Failure to Make a Required Distribution', 'Item 6\\.05\\.': 'Securities Act Updating Disclosure',
-    'Item 7\\.01': 'Regulation FD Disclosure',
-    'Item 8\\.01\\.': 'Other Events', 'Item 9\\.01\\.': 'Financial Statements and Exhibits'
+    'Item 7\\.01\\.': 'Regulation FD Disclosure',
+    'Item 8\\.01\\.': 'Other Events', 'Item 9\\.01\\.?': 'Financial Statements and Exhibits'
 }
 
 
